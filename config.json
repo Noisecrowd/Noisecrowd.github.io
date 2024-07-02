@@ -1,6 +1,35 @@
-{
-    "title":"我敢说这个世界上根本没有彩虹大象",
-    "subTitle":"63000天之后，你还会记得曾有心甘情愿为你变成标本的蝴蝶吗？",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>彩虹大象</title>
+    <style>
+        .rainbow {
+            background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 127, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(75, 0, 130), rgb(143, 0, 255));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div id="blog">
+        <h1>我敢说这个世界上根本没有<span class="rainbow">大象</span></h1>
+        <h2>63000天之后，你还会记得曾有心甘情愿为你变成标本的蝴蝶吗？</h2>
+        <img src="https://github.githubassets.com/favicons/favicon.svg" alt="Avatar">
+    </div>
+    <script>
+        // JS object representing the blog data
+        const blogData = {
+            "title": "我敢说这个世界上根本没有彩虹大象",
+            "subTitle": "63000天之后，你还会记得曾有心甘情愿为你变成标本的蝴蝶吗？",
+            "avatarUrl": "https://github.githubassets.com/favicons/favicon.svg",
+            "GMEEK_VERSION": "last"
+        };
+
+        // Set the blog content dynamically
+        document.querySelector('#blog h1').innerHTML = blogData.title.replace('大象', '<span class="rainbow">大象</span>');
+        document.querySelector('#blog h2').textContent = blogData.subTitle;
+        document.querySelector('#blog img').src = blogData.avatarUrl;
+    </script>
+</body>
+</html>
